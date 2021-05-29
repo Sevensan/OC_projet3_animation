@@ -11,12 +11,36 @@ body {
   background: #fff;
 }
 
-.container {
-  margin: 0 1rem;
+.bg-gray {
+  background: #e7e7e7;
+}
+
+.bg-gray-light {
+  background: #f8f8f8;
+}
+
+section {
+  padding: 2rem 0;
 }
 
 .rounded {
   border-radius: 20px;
+}
+
+.flex {
+  display: flex;
+}
+.flex__justify-center {
+  justify-content: center;
+}
+.flex__align-center {
+  align-items: center;
+}
+.flex__column {
+  flex-direction: column;
+}
+.flex__between {
+  justify-content: space-between;
 }
 
 body {
@@ -30,8 +54,8 @@ body {
 h1 {
   font-family: "Roboto", sans-serif;
   font-weight: 900;
-  font-size: 5rem;
-  font-style: italic;
+  font-size: 2rem;
+  line-height: initial;
 }
 
 textarea {
@@ -47,16 +71,23 @@ button {
   font-size: 2.75rem;
 }
 
+.text-center {
+  text-align: center;
+}
+
 a {
   text-decoration: none;
+  color: white;
 }
 
 .btn {
-  padding: 1.5rem;
-  border: 0.1rem solid #1f1f1f;
-  color: #1f1f1f;
-  background: linear-gradient(#ab4bc8, #9198e5);
+  padding: 1rem;
+  color: #fff;
+  background: linear-gradient(#FF79DA, #9356DC);
+  margin: 1rem;
   cursor: pointer;
+  border-radius: 30px;
+  box-shadow: 0px 3px 5px #a1a1a1;
 }
 .btn:hover {
   background: #1f1f1f;
@@ -67,23 +98,77 @@ a {
   margin: 0 auto;
 }
 
+.card {
+  margin: 0.5rem 0;
+  background: #fff;
+  position: relative;
+}
+.card img {
+  width: 100%;
+  height: 14rem;
+  object-fit: cover;
+  border-radius: 20px 20px 0 0;
+}
+.card__vignette {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  border-radius: 5px;
+  background: #99E2D0;
+  color: #299440;
+  padding: 0.5rem;
+}
+.card__bottom {
+  margin: 0 2rem 0 0.5rem;
+  padding: 0.5rem;
+}
+.card i {
+  font-weight: 100;
+  font-size: x-large;
+}
+.card__title {
+  font-weight: bold;
+}
+
+.item {
+  background: #f8f8f8;
+  position: relative;
+  padding: 1rem;
+  margin: 1rem;
+  color: #1f1f1f;
+  box-shadow: 0px 3px 5px #a1a1a1;
+}
+.item i {
+  margin: 0 0.5rem;
+}
+.item__number {
+  position: absolute;
+  left: -13px;
+  background: #9356DC;
+  color: #fff;
+  width: 25px;
+  text-align: center;
+  border-radius: 50%;
+}
+
 .header {
-  background: #1f1f1f;
-  height: 10rem;
+  background: #fff;
+  height: 5rem;
   display: flex;
   align-items: center;
+  justify-content: center;
   flex-wrap: wrap;
   width: 100%;
+  box-shadow: 0px 3px 5px #a1a1a1;
+  position: relative;
 }
 .header__logo {
-  font-size: 7rem;
-  color: #ab4bc8;
-  margin-left: 10rem;
-  text-shadow: 0.55rem 0.55rem #fff;
+  margin: 1rem;
+  width: 50%;
 }
 
 .nav {
-  padding-right: 6rem;
+  padding-right: 1rem;
   flex: 2 1 auto;
   text-align: right;
 }
@@ -97,25 +182,24 @@ a {
   color: #D6FFF5;
 }
 .nav__link--active {
-  color: #ab4bc8;
+  color: #9356DC;
 }
 .nav__link--active:hover {
   cursor: default;
-  color: #ab4bc8;
+  color: #9356DC;
 }
 .nav__link a:hover {
   color: #fff;
 }
 
 .container {
-  margin: 6rem;
-  padding: 1.5rem 1.5rem 0 1.5rem;
-  border: 0.1rem solid #D6FFF5;
+  margin: 1rem;
+  padding: 0.25rem 0.25rem 0 0.25rem;
 }
 
 .form {
   width: 100%;
-  padding-bottom: 1.5rem;
+  padding-bottom: 0.25rem;
 }
 .form__heading {
   width: 100%;
@@ -123,36 +207,71 @@ a {
   text-shadow: 0.55rem 0.55rem #393939;
   background: #1f1f1f;
   line-height: 5rem;
-  padding: 1.5rem;
+  padding: 0.25rem;
 }
 .form__field label {
   color: #D6FFF5;
   display: block;
   font-size: 2rem;
   line-height: 2rem;
-  padding-top: 1.5rem;
+  padding-top: 0.25rem;
 }
 .form__field input {
   width: 100%;
-  background: #ab4bc8;
+  background: #9356DC;
   border: 0.1rem solid #1f1f1f;
-  padding: 1.5rem;
+  padding: 0.25rem;
   color: #D6FFF5;
   font-weight: 900;
   font-style: italic;
   font-size: 2.75rem;
   border: 0.1rem solid #1f1f1f;
-  background-color: #ab4bc8;
+  background-color: #9356DC;
   color: #1f1f1f;
 }
 .form__field textarea {
   width: 100%;
   color: #1f1f1f;
-  background: #ab4bc8;
+  background: #9356DC;
   border: 0.1rem solid #1f1f1f;
   outline: none;
-  padding: 1.5rem;
-  margin-bottom: 0.75rem;
+  padding: 0.25rem;
+  margin-bottom: 0.125rem;
+}
+
+footer {
+  padding: 1rem;
+  background: #383838;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+}
+footer img {
+  width: 6rem;
+  padding: 1rem 0;
+  filter: invert(1);
+}
+footer a {
+  display: flex;
+  align-items: center;
+}
+footer a i {
+  padding-right: 0.6rem;
+}
+
+.localisation {
+  padding: 1rem;
+}
+.localisation i {
+  padding-right: 1rem;
+}
+
+.restaurants {
+  padding: 1rem 1rem 3rem 1rem;
+}
+
+.lastSection {
+  padding-bottom: 0;
 }
 
 .quote {
@@ -161,7 +280,7 @@ a {
   font-weight: 900;
   font-style: italic;
   color: #D6FFF5;
-  margin: 2rem 6rem -3rem 6rem;
+  margin: 2rem 1rem -0.5rem 1rem;
 }
 .quote strong {
   color: #1f1f1f;
@@ -170,12 +289,12 @@ a {
 .proj-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-column-gap: 1.5rem;
+  grid-column-gap: 0.25rem;
 }
 
 .proj-prev {
   color: #fff;
-  margin-bottom: 1.5rem;
+  margin-bottom: 0.25rem;
 }
 .proj-prev__image {
   margin: 0;
@@ -218,16 +337,16 @@ a {
   display: grid;
   grid-template-columns: 2fr 5fr;
   grid-template-rows: repeat(3, auto);
-  padding: 1.5rem;
+  padding: 0.25rem;
   grid-template-areas: "imagery heading" "imagery copy" "imagery btn";
-  margin-bottom: 1.5rem;
+  margin-bottom: 0.25rem;
 }
 .about__heading {
   grid-area: heading;
   color: #fff;
   text-shadow: 0.55rem 0.55rem #393939;
   text-align: right;
-  padding-right: 1.5rem;
+  padding-right: 0.25rem;
 }
 .about__imagery {
   grid-area: imagery;
@@ -247,14 +366,16 @@ a {
 }
 .about__copy p {
   line-height: 2.4rem;
-  margin-bottom: 3.375rem;
+  margin-bottom: 0.5625rem;
 }
 .about__btn {
-  padding: 1.5rem;
-  border: 0.1rem solid #1f1f1f;
-  color: #1f1f1f;
-  background: linear-gradient(#ab4bc8, #9198e5);
+  padding: 1rem;
+  color: #fff;
+  background: linear-gradient(#FF79DA, #9356DC);
+  margin: 1rem;
   cursor: pointer;
+  border-radius: 30px;
+  box-shadow: 0px 3px 5px #a1a1a1;
   grid-area: btn;
 }
 .about__btn:hover {
@@ -271,11 +392,11 @@ a {
 
 .project {
   width: 100%;
-  margin-bottom: 1.8rem;
+  margin-bottom: 0.3rem;
   display: grid;
   grid-template-columns: 5fr 3fr;
   grid-template-rows: repeat(3, auto);
-  grid-gap: 1.5rem;
+  grid-gap: 0.25rem;
   grid-template-areas: "image synopsis" "tags synopsis" "btn btn";
 }
 .project__image {
@@ -295,7 +416,7 @@ a {
 }
 .project__synopsis {
   grid-area: synopsis;
-  padding-left: 1.5rem;
+  padding-left: 0.25rem;
 }
 .project__synopsis h1 {
   color: #fff;
@@ -316,11 +437,13 @@ a {
   font-style: italic;
 }
 .project__btn {
-  padding: 1.5rem;
-  border: 0.1rem solid #1f1f1f;
-  color: #1f1f1f;
-  background: linear-gradient(#ab4bc8, #9198e5);
+  padding: 1rem;
+  color: #fff;
+  background: linear-gradient(#FF79DA, #9356DC);
+  margin: 1rem;
   cursor: pointer;
+  border-radius: 30px;
+  box-shadow: 0px 3px 5px #a1a1a1;
   grid-area: btn;
 }
 .project__btn:hover {

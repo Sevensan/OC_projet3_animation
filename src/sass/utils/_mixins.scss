@@ -1,3 +1,6 @@
+@mixin box-shadow($colour){
+    box-shadow: 0px 3px 5px $colour;
+}
 @mixin heading-shadow($colour:lightness-shift($colour-primary), $offset: $heading-shadow-size){
     text-shadow: $offset $offset $colour;
 }
@@ -22,11 +25,13 @@
 }
 
 @mixin btn {
-    padding: $grid-gutter;
-    @include border;
-    color: $colour-primary;
+    padding: $layout-margin;
+    color: $colour-white;
     background: $gradient;
+    margin: 1rem;
     cursor: pointer;
+    border-radius: 30px;
+    @include box-shadow($colour-shadow);
     &:hover{
         background: $colour-primary;
         color: $colour-accent;

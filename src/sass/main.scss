@@ -8,13 +8,16 @@
 @import "./base/reset";
 
 @import "./components/buttons";
+@import "./components/card";
+@import "./components/item";
 
 @import "./layout/header";
 @import "./layout/nav";
 @import "./layout/container";
 @import "./layout/form";
+@import "./layout/footer";
 
-
+@import "./pages/home";
 @import "./pages/work";
 @import "./pages/about";
 @import "./pages/project";

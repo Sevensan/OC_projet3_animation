@@ -1,10 +1,17 @@
 $colour-primary: #1f1f1f;
-$colour-secondary: #ab4bc8;
+$colour-secondary: #9356DC;
+$colour-pink: #FF79DA;
 $colour-accent: #D6FFF5;
 $colour-white: #fff;
+$colour-gray: #e7e7e7;
+$colour-gray-light: rgb(248, 248, 248);
+$colour-gray-dark: #383838;
+$colour-green: #299440;
+$colour-green-light: #99E2D0;
+$colour-shadow: rgb(161, 161, 161);
 $colour-invalid: #DB464B;
-$gradient: linear-gradient($colour-secondary, #9198e5);
+$gradient: linear-gradient($colour-pink, $colour-secondary);
 
 $heading-shadow-size: .55rem;
-$layout-margin: 6rem;
+$layout-margin: 1rem;
 $grid-gutter: $layout-margin * .25;
