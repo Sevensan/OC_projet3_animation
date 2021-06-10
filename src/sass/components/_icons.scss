@@ -1,0 +1,15 @@
+.fa-heart{
+    font-weight: 500 !important;
+    position: relative;
+    font-size: x-large;
+    &::before{
+        // transition: all .5s ease;
+    }
+    &:hover{
+        background: -webkit-gradient(linear, left top, left bottom, from($colour-secondary), to($colour-pink));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        display: initial; /* reset Font Awesome's display:inline-block */
+        font-weight: 900 !important;
+    }
+}

@@ -13,4 +13,16 @@
         margin: 1rem;
         width: 50%;
     }
+
+    &__link{
+        color: $colour-primary;
+        font-size: x-large;
+        position: relative;
+
+        i{
+            position: absolute;
+            left: 10px;
+            bottom: 30%;
+        }
+    }
 }

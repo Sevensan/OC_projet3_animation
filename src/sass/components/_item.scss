@@ -4,10 +4,14 @@
     padding: 1rem;
     margin: 1rem;
     color: $colour-primary;
+    font-weight: bold;
+    transition: all .5s;
     @include box-shadow($colour-shadow);
 
     i{
         margin: 0 .5rem;
+        color: $colour-shadow;
+        transition: all .5s;
     }
 
     &__number{
@@ -18,5 +22,12 @@
         width: 25px;
         text-align: center;
         border-radius: 50%;
+    }
+
+    &:hover{
+        background: $colour-secondary-transparent;
+        i{
+            color: $colour-secondary !important;
+        }
     }
 }

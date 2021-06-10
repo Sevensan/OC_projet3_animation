@@ -1,0 +1,127 @@
+#background{
+    width: 100%;
+    height: 35vh;
+    background-size: cover;
+    position: absolute;
+    top: 30px;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    background-repeat: no-repeat;
+    background-image: url("../../public/img/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg");
+}
+
+.menu{
+    margin: 10rem 0 4rem 0;
+    padding: 2rem 1rem 1rem 1rem;
+
+
+    &__title{
+        display: flex;
+        align-items: baseline;
+
+        h2{
+            margin-bottom: 1rem;
+        }
+        i{
+            margin-left: 5rem;
+        }
+    }
+}
+
+.entree, .plats, .desserts{
+    &__title{
+        padding: 2rem 0 1rem 0;
+        text-transform: uppercase;
+    }
+}
+
+.plat{
+    background: white;
+    border-radius: 20px;
+    padding: .5rem 0;
+    box-shadow: 0px 5px 5px #ddd;
+    position: relative;
+    overflow: hidden;
+    animation-name: fadein;
+    margin-bottom: 1rem;
+
+    p{
+        padding-left: 1rem;
+        line-height: 20px;
+    }
+
+    &__titre{
+        font-weight: bold;
+    }
+
+    &__prix{
+        margin-right: 1rem;
+        font-weight: bold;
+    }
+    &__check-animation{
+        position: absolute;
+        background: $colour-green-light;
+        border-radius: 0 20px 20px 0;
+        height: 100%;
+        width: 50px;
+        right: -50px;
+        top: 0;
+    }
+
+    .animation-bg{
+        background: white;
+        border-radius: 50%;
+        color: $colour-green-light;
+        width: 30px;
+        height: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .animation-bg, &__check-animation, &__prix{
+        transition: all .5s ease;
+    }
+
+    &:hover{
+        .plat__check-animation{
+            right: 0px;
+            // animation: hovercheck .7s forwards;
+
+        }
+        .plat__prix{
+            margin-right: 4rem;
+            // animation: toLeft .7s forwards;
+        }
+        .animation-bg{
+            transform: rotate(360deg);
+            // animation: circle .7s forwards;
+        }
+    }
+}
+.anim1{
+    animation-duration: .5s;
+}
+.anim2{
+    animation-duration: .8s ;
+
+}
+.anim3{
+    animation-duration: 1s;
+}
+
+.underline{
+    width: 30px;
+    height: 3px;
+    background:$colour-green-light;
+}
+
+#alafrancaise{
+    background: $colour-gray;
+    border-radius: 30px 30px 0 0;
+    padding-bottom: 4rem;
+    .btn{
+        margin: 0 0 2rem 0;
+        padding: 1rem 3rem;
+    }
+}

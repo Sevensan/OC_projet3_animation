@@ -1,0 +1,12 @@
+@keyframes fadein {
+    from{
+        opacity: 0;
+        transform: translate(0, 20px)
+    }
+    50%{
+        opacity: 1;
+    }
+    to{
+        transform: translate(0, 0)
+    }
+}
