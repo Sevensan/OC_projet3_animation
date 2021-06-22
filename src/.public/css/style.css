@@ -319,7 +319,8 @@ a {
 }
 .header__logo {
   margin: 1rem;
-  width: 50%;
+  width: auto;
+  height: 2rem;
 }
 .header__link {
   color: #1f1f1f;
@@ -328,7 +329,7 @@ a {
 }
 .header__link i {
   position: absolute;
-  left: 10px;
+  left: -50px;
   bottom: 30%;
 }
 
@@ -528,13 +529,11 @@ footer a i {
 }
 .menu__title {
   display: flex;
-  align-items: baseline;
-}
-.menu__title h2 {
-  margin-bottom: 1rem;
+  align-items: center;
+  justify-content: space-between;
 }
 .menu__title i {
-  margin-left: 5rem;
+  margin-right: 10px;
 }
 
 .entree__title, .plats__title, .desserts__title {

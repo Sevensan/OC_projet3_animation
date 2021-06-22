@@ -11,7 +11,8 @@
 
     &__logo {
         margin: 1rem;
-        width: 50%;
+        width: auto;
+        height: 2rem;
     }
 
     &__link{
@@ -21,7 +22,7 @@
 
         i{
             position: absolute;
-            left: 10px;
+            left: -50px;
             bottom: 30%;
         }
     }

@@ -29,13 +29,11 @@
 
     &__title{
         display: flex;
-        align-items: baseline;
+        align-items: center;
+        justify-content: space-between;
 
-        h2{
-            margin-bottom: 1rem;
-        }
         i{
-            margin-left: 5rem;
+            margin-right: 10px;
         }
     }
 }
