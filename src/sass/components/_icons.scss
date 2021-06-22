@@ -2,14 +2,38 @@
     font-weight: 500 !important;
     position: relative;
     font-size: x-large;
+    overflow: hidden;
+    width: 24px;
+    height: 24px;
     &::before{
-        // transition: all .5s ease;
-    }
-    &:hover{
-        background: -webkit-gradient(linear, left top, left bottom, from($colour-secondary), to($colour-pink));
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 0;
+        // background: -webkit-gradient(linear, left top, left bottom, from($colour-secondary), to($colour-pink));
+        background-image: -webkit-gradient( linear, left top, right bottom, from($colour-secondary), to($colour-pink) );
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         display: initial; /* reset Font Awesome's display:inline-block */
         font-weight: 900 !important;
+        background-position: 0px 0;
+        background-size: 24px 24px;
+        transition: all .5s;
+    }
+    &::after{
+        content: '\f004';
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    &:hover{
+        &::before{
+            opacity: 1;
+        }
     }
 }
+// .fa-heart:hover{
+//     .fa-heart::before{
+//         animation: icon .5s forwards
+//     }
+// }

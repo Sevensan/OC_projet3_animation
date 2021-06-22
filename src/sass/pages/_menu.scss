@@ -1,4 +1,4 @@
-#background{
+.background{
     width: 100%;
     height: 35vh;
     background-size: cover;
@@ -8,6 +8,17 @@
     right: 0;
     z-index: -1;
     background-repeat: no-repeat;
+}
+#alafrancaise__Bg{
+    background-image: url("../../public/img/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg");
+}
+#lanoteenchantee__Bg{
+    background-image: url("../../public/img/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg");
+}
+#lapalettedugout__Bg{
+    background-image: url("../../public/img/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
+}
+#ledelicedessens__Bg{
     background-image: url("../../public/img/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg");
 }
 
@@ -53,6 +64,11 @@
 
     &__titre{
         font-weight: bold;
+    }
+    &__description{
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
     }
 
     &__prix{
@@ -116,7 +132,7 @@
     background:$colour-green-light;
 }
 
-#alafrancaise{
+#alafrancaise, #ledelicedessens, #lanoteenchantee, #lapalettedugout{
     background: $colour-gray;
     border-radius: 30px 30px 0 0;
     padding-bottom: 4rem;

@@ -9,7 +9,7 @@
     @include box-shadow($colour-shadow);
 
     i{
-        margin: 0 .5rem;
+        margin: 0 1rem;
         color: $colour-shadow;
         transition: all .5s;
     }
@@ -29,5 +29,10 @@
         i{
             color: $colour-secondary !important;
         }
+    }
+
+    p{
+        font-size: .9rem;
+        padding-left: .3rem;
     }
 }

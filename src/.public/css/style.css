@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @keyframes fadein {
   from {
     opacity: 0;
@@ -8,6 +9,88 @@
   }
   to {
     transform: translate(0, 0);
+  }
+}
+@-webkit-keyframes logoAnim {
+  from {
+    opacity: 0;
+    transform: translate(0, 20px);
+  }
+  25% {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(0, 10px);
+  }
+  to {
+    transform: translate(0, 0);
+  }
+}
+@-webkit-keyframes bulle {
+  from {
+    opacity: 1;
+    transform: translate(0, 20px);
+  }
+  75% {
+    transform: translate(0, 0);
+    opacity: 0.2;
+  }
+  to {
+    opacity: 0;
+    transform: translate(0, 50px);
+  }
+}
+@-webkit-keyframes loaderRotate {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes fadeout {
+  0% {
+    transform: skew(0deg, 0deg);
+  }
+  20% {
+    transform: skew(20deg, -20deg);
+  }
+  80% {
+    transform: skew(85deg, -85deg);
+  }
+  100% {
+    transform: skew(90deg, -90deg);
+    z-index: -9999;
+    display: none;
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+@-webkit-keyframes icon {
+  from {
+    position: relative;
+    background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(255, 255, 0, 0)), color-stop(0.5, #9356DC), to(#FF79DA));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: initial;
+    /* reset Font Awesome's display:inline-block */
+    font-weight: 900 !important;
+    background-position: 0px 0;
+    background-size: 400px 24px;
+    transition: all 0.5s;
+  }
+  to {
+    background-position: 24px 24px;
+    background-size: 24px 24px;
+  }
+}
+@keyframes animate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
   }
 }
 *,
@@ -75,6 +158,11 @@ h1 {
   line-height: initial;
 }
 
+h2 {
+  font-family: "Shrikhand", cursive;
+  font-weight: bold;
+}
+
 textarea {
   font-family: "Roboto", sans-serif;
   font-weight: 100;
@@ -105,7 +193,7 @@ a {
   margin: 1rem;
   cursor: pointer;
   border-radius: 30px;
-  box-shadow: 0px 3px 5px #a1a1a1;
+  box-shadow: 0px 3px 5px rgba(161, 161, 161, 0.5);
 }
 .btn:hover {
   background: #1f1f1f;
@@ -158,11 +246,11 @@ a {
   color: #1f1f1f;
   font-weight: bold;
   transition: all 0.5s;
-  box-shadow: 0px 3px 5px #a1a1a1;
+  box-shadow: 0px 3px 5px rgba(161, 161, 161, 0.5);
 }
 .item i {
-  margin: 0 0.5rem;
-  color: #a1a1a1;
+  margin: 0 1rem;
+  color: rgba(161, 161, 161, 0.5);
   transition: all 0.5s;
 }
 .item__number {
@@ -180,19 +268,42 @@ a {
 .item:hover i {
   color: #9356DC !important;
 }
+.item p {
+  font-size: 0.9rem;
+  padding-left: 0.3rem;
+}
 
 .fa-heart {
   font-weight: 500 !important;
   position: relative;
   font-size: x-large;
+  overflow: hidden;
+  width: 24px;
+  height: 24px;
 }
-.fa-heart:hover {
-  background: -webkit-gradient(linear, left top, left bottom, from(#9356DC), to(#FF79DA));
+.fa-heart::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  background-image: -webkit-gradient(linear, left top, right bottom, from(#9356DC), to(#FF79DA));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   display: initial;
   /* reset Font Awesome's display:inline-block */
   font-weight: 900 !important;
+  background-position: 0px 0;
+  background-size: 24px 24px;
+  transition: all 0.5s;
+}
+.fa-heart::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.fa-heart:hover::before {
+  opacity: 1;
 }
 
 .header {
@@ -203,7 +314,7 @@ a {
   justify-content: center;
   flex-wrap: wrap;
   width: 100%;
-  box-shadow: 0px 3px 5px #a1a1a1;
+  box-shadow: 0px 3px 5px rgba(161, 161, 161, 0.5);
   position: relative;
 }
 .header__logo {
@@ -314,6 +425,52 @@ footer a i {
   padding-right: 0.6rem;
 }
 
+.loader-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f8f8f8;
+  animation-name: fadeout;
+  animation-delay: 1s;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+.loader {
+  margin: 0 auto;
+  position: relative;
+  width: 100px;
+  height: 100px;
+  border-radius: 50px;
+  background: linear-gradient(#FF79DA, #9356DC, #FF79DA);
+  animation: animate 2s linear;
+}
+
+.loader span {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50px;
+  background: linear-gradient(#FF79DA, #9356DC, #FF79DA);
+}
+
+.loader:after {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  right: 10px;
+  bottom: 10px;
+  background: #f8f8f8;
+  border-radius: 50px;
+}
+
 .localisation {
   padding: 1rem;
 }
@@ -337,7 +494,7 @@ footer a i {
   padding-bottom: 0;
 }
 
-#background {
+.background {
   width: 100%;
   height: 35vh;
   background-size: cover;
@@ -347,6 +504,21 @@ footer a i {
   right: 0;
   z-index: -1;
   background-repeat: no-repeat;
+}
+
+#alafrancaise__Bg {
+  background-image: url("../../public/img/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg");
+}
+
+#lanoteenchantee__Bg {
+  background-image: url("../../public/img/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg");
+}
+
+#lapalettedugout__Bg {
+  background-image: url("../../public/img/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
+}
+
+#ledelicedessens__Bg {
   background-image: url("../../public/img/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg");
 }
 
@@ -386,6 +558,11 @@ footer a i {
 }
 .plat__titre {
   font-weight: bold;
+}
+.plat__description {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 .plat__prix {
   margin-right: 1rem;
@@ -441,12 +618,12 @@ footer a i {
   background: #99E2D0;
 }
 
-#alafrancaise {
+#alafrancaise, #ledelicedessens, #lanoteenchantee, #lapalettedugout {
   background: #e7e7e7;
   border-radius: 30px 30px 0 0;
   padding-bottom: 4rem;
 }
-#alafrancaise .btn {
+#alafrancaise .btn, #ledelicedessens .btn, #lanoteenchantee .btn, #lapalettedugout .btn {
   margin: 0 0 2rem 0;
   padding: 1rem 3rem;
 }
@@ -553,7 +730,7 @@ footer a i {
   margin: 1rem;
   cursor: pointer;
   border-radius: 30px;
-  box-shadow: 0px 3px 5px #a1a1a1;
+  box-shadow: 0px 3px 5px rgba(161, 161, 161, 0.5);
   grid-area: btn;
 }
 .about__btn:hover {
@@ -622,7 +799,7 @@ footer a i {
   margin: 1rem;
   cursor: pointer;
   border-radius: 30px;
-  box-shadow: 0px 3px 5px #a1a1a1;
+  box-shadow: 0px 3px 5px rgba(161, 161, 161, 0.5);
   grid-area: btn;
 }
 .project__btn:hover {
