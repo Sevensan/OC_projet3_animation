@@ -1,3 +1,7 @@
 .btn {
-    @include btn
+    @include btn;
+
+    &:hover{
+
+    }
 }

@@ -1,28 +1,6 @@
 @mixin box-shadow($colour){
     box-shadow: 0px 3px 5px $colour;
 }
-@mixin heading-shadow($colour:lightness-shift($colour-primary), $offset: $heading-shadow-size){
-    text-shadow: $offset $offset $colour;
-}
-
-@mixin border($colour:$colour-primary) {
-    border: .1rem solid $colour;
-}
-
-@mixin img-ratio {
-    width: 100%;
-        display: block;
-        overflow: hidden;
-        padding-top: 56.25%;
-        position: relative;
-        & img {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            width: 100%;
-            transform: translate(-50%, -50%);
-        }
-}
 
 @mixin btn {
     padding: $layout-margin;
@@ -32,13 +10,32 @@
     margin: 1rem;
     cursor: pointer;
     border-radius: 30px;
+    transition: all .5s ease;
     @include box-shadow($colour-shadow);
     &:hover{
-        background: $colour-primary;
-        color: $colour-accent;
-    }
-    &--full-width {
-        width: 100%;
-        margin: 0 auto;
+        filter: brightness(1.1);
+        @include box-shadow(gray);
     }
 }
+// @mixin heading-shadow($colour:lightness-shift($colour-primary), $offset: $heading-shadow-size){
+//     text-shadow: $offset $offset $colour;
+// }
+
+// @mixin border($colour:$colour-primary) {
+//     border: .1rem solid $colour;
+// }
+
+// @mixin img-ratio {
+//     width: 100%;
+//         display: block;
+//         overflow: hidden;
+//         padding-top: 56.25%;
+//         position: relative;
+//         & img {
+//             position: absolute;
+//             top: 50%;
+//             left: 50%;
+//             width: 100%;
+//             transform: translate(-50%, -50%);
+//         }
+// }
