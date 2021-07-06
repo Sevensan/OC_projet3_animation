@@ -14,28 +14,6 @@
 //FIN DE L'ANIMATION
 
 
-// ANIMATION DU COEUR
-@-webkit-keyframes icon {
-    from{
-        position: relative;
-        // background: -webkit-gradient(linear, left top, left bottom, from($colour-secondary), to($colour-pink));
-        background-image: -webkit-gradient( linear, left top, right bottom, from(rgba(255, 255, 0, 0)), color-stop(0.5, $colour-secondary), to($colour-pink) );
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        display: initial; /* reset Font Awesome's display:inline-block */
-        font-weight: 900 !important;
-        background-position: 0px 0;
-        background-size: 400px 24px;
-        transition: all .5s;
-    }
-    to {
-        background-position: 24px 24px;
-        background-size: 24px 24px;
-    }
-}
-// FIN DE L'ANIMATION DU COEUR
-
-
 // SPINNER ANIMATION
 @keyframes animate {
     0% {
